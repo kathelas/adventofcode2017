@@ -97,6 +97,12 @@ public class Main {
     }
 
 
+    public static void calcvalue(int[][] values, int start, int xx, int yy){
+        values[start+xx][start+yy] = values[start+(xx+1)][start+yy] + values[start+xx][start+(yy+1)] + values[start+(xx-1)][start+yy] + values[start+xx][start+(yy-1)] + values[start+(xx+1)][start+(yy+1)] + values[start+(xx+1)][start+(yy-1)] + values[start+(xx-1)][start+(yy+1)] + values[start+(xx-1)][start+(yy-1)];
+    }
+
+
+
     public static int value(int input){
         int x = 0;
         int y = 0;
@@ -120,7 +126,6 @@ public class Main {
         values[start][start] = 1;
 
 
-
         while (square < input) {
 
             //right
@@ -128,7 +133,7 @@ public class Main {
                 while (x <= max_x) {
                     x++;
                     square++;
-                    values[start+x][start+y] = values[start+(x+1)][start+y] + values[start+x][start+(y+1)] + values[start+(x-1)][start+y] + values[start+x][start+(y-1)] + values[start+(x+1)][start+(y+1)] + values[start+(x+1)][start+(y-1)] + values[start+(x-1)][start+(y+1)] + values[start+(x-1)][start+(y-1)];
+                    calcvalue(values, start, x, y);
                     if(values[start+x][start+y] > input)
                         return values[start+x][start+y];
                     if (square == input)
@@ -146,7 +151,7 @@ public class Main {
                 while (y <= max_y) {
                     y++;
                     square++;
-                    values[start+x][start+y] = values[start+(x+1)][start+y] + values[start+x][start+(y+1)] + values[start+(x-1)][start+y] + values[start+x][start+(y-1)] + values[start+(x+1)][start+(y+1)] + values[start+(x+1)][start+(y-1)] + values[start+(x-1)][start+(y+1)] + values[start+(x-1)][start+(y-1)];
+                    calcvalue(values, start, x, y);
                     if(values[start+x][start+y] > input)
                         return values[start+x][start+y];
                     if (square == input)
@@ -164,7 +169,7 @@ public class Main {
                 while (x >= min_x) {
                     x--;
                     square++;
-                    values[start+x][start+y] = values[start+(x+1)][start+y] + values[start+x][start+(y+1)] + values[start+(x-1)][start+y] + values[start+x][start+(y-1)] + values[start+(x+1)][start+(y+1)] + values[start+(x+1)][start+(y-1)] + values[start+(x-1)][start+(y+1)] + values[start+(x-1)][start+(y-1)];
+                    calcvalue(values, start, x, y);
                     if(values[start+x][start+y] > input)
                         return values[start+x][start+y];
                     if (square == input)
@@ -182,7 +187,7 @@ public class Main {
                 while (y >= min_y) {
                     y--;
                     square++;
-                    values[start+x][start+y] = values[start+(x+1)][start+y] + values[start+x][start+(y+1)] + values[start+(x-1)][start+y] + values[start+x][start+(y-1)] + values[start+(x+1)][start+(y+1)] + values[start+(x+1)][start+(y-1)] + values[start+(x-1)][start+(y+1)] + values[start+(x-1)][start+(y-1)];
+                    calcvalue(values, start, x, y);
                     if(values[start+x][start+y] > input)
                         return values[start+x][start+y];
                     if (square == input)
