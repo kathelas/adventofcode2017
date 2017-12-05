@@ -1,21 +1,3 @@
-Skip to content
- 
-Search…
-All gists
-GitHub
-New gist
-@kathelas 
- Edit
-  Delete
-  Star 0 @kathelaskathelas/day2.java
-Created 15 hours ago
-Embed  
-<script src="https://gist.github.com/kathelas/e19fce9ff9671b42b7158180a2d71b49.js"></script>
-  Download ZIP
- Code  Revisions 1
-advent of code day 2
-Raw
- day2.java
 public class Main {
 
     public static void main(String[] args) {
@@ -115,24 +97,3 @@ public class Main {
         return Min;
     }
 }
- @kathelas
-  
-            
- 
-Write  Preview
-
-Leave a comment
-Choose Files Attach files by dragging & dropping, selecting them, or pasting from the clipboard.  Styling with Markdown is supported
-Comment
-© 2017 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-API
-Training
-Shop
-Blog
-About
