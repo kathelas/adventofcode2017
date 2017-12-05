@@ -5,7 +5,7 @@ public class Main {
         int input = 347991;
         System.out.println("Distance: " + distance(input));
         System.out.println("Value: " + value(input));
-        System.out.println("Alternate Distance: " + alternatedistance(input));
+        System.out.println("Alternate Distance: " + alternatedistance(input));  //better
 
     }
 
