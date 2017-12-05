@@ -5,6 +5,7 @@ public class Main {
         int input = 347991;
         System.out.println("Distance: " + distance(input));
         System.out.println("Value: " + value(input));
+        System.out.println("Alternate Distance: " + alternatedistance(input));
 
     }
 
@@ -196,6 +197,50 @@ public class Main {
 
         return 0;
 
+    }
+
+
+    public static int alternatedistance(int input){
+        int a = (int) Math.pow(((int) Math.sqrt(input)), 2);
+        int a_x;
+        int a_y;
+        int input_x;
+        int input_y;
+
+
+        if( ((int) Math.sqrt(a)) % 2 == 0){
+            a_x = -((int) Math.sqrt(a)/2 -1);
+            a_y = (int) Math.sqrt(a)/2;
+
+            if((input - a) <= ((int) Math.sqrt(a)) + 1){
+                input_x = a_x - 1;
+                input_y = a_y - (input - a - 1);
+            }
+            else {
+                input_x = a_x + ((input - a) - ((int) Math.sqrt(a) + 2));
+                input_y = a_y - ((int) Math.sqrt(a));
+            }
+        }
+        else{
+            a_x = ((int) Math.sqrt(a)-1)/2;
+            a_y = -(((int) Math.sqrt(a)-1)/2);
+
+            if((input - a) <= ((int) Math.sqrt(a)) + 1){
+                input_x = a_x + 1;
+                input_y = a_y + (input - a - 1);
+            }
+            else {
+                input_x = a_x - ((input - a) - ((int) Math.sqrt(a) + 2));
+                input_y = a_y + ((int) Math.sqrt(a));
+            }
+        }
+
+        if(input_x < 0)
+            input_x = input_x * -1;
+        if(input_y < 0)
+            input_y = input_y * -1;
+
+        return (input_x + input_y);
     }
 
 }
