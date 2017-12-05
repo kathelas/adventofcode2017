@@ -1,21 +1,3 @@
-Skip to content
- 
-Search…
-All gists
-GitHub
-New gist
-@kathelas 
- Edit
-  Delete
-  Star 0 @kathelaskathelas/day3.java
-Created 13 hours ago
-Embed  
-<script src="https://gist.github.com/kathelas/8309bddfd709a3c9c8e9e0f2c604b98f.js"></script>
-  Download ZIP
- Code  Revisions 1
-advent of code day 3
-Raw
- day3.java
 public class Main {
 
     public static void main(String[] args) {
@@ -217,25 +199,3 @@ public class Main {
     }
 
 }
- @kathelas
-  
-            
- 
-Write  Preview
-
-Leave a comment
-Choose Files Attach files by dragging & dropping, selecting them, or pasting from the clipboard.  Styling with Markdown is supported
-Comment
-1
-© 2017 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-API
-Training
-Shop
-Blog
-About
